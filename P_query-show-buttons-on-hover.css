@@ -1,0 +1,12 @@
+.workspace-leaf-content[data-type="markdown"] .internal-query .nav-header .nav-buttons-container:not(:hover, :focus) {
+    display: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.workspace-leaf-content[data-type="markdown"] .internal-query .nav-header:hover .nav-buttons-container {
+    display: flex;
+    transition: 600ms ease-in-out;
+    position: unset;
+    justify-content: center;
+}

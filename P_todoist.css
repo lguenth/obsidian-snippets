@@ -1,0 +1,24 @@
+.is-live-preview .block-language-todoist {
+    padding-left: 0px !important;
+}
+
+ul.todoist-task-list {
+    white-space: normal;
+    padding-left: 10px;
+}
+
+.todoist-success.todoist-success {
+    border: none;
+    padding: 0 10px 0px 0px;
+    margin-top: 0px;
+}
+
+.todoist-success p {
+    display: inline;
+    font-style: italic;
+}
+
+.todoist-success p:after {
+    content: " 🍹";
+    font-style: initial;
+}
