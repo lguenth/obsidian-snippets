@@ -1,0 +1,7 @@
+.theme-dark .token.selector, .theme-dark .token.attr-name, .theme-dark .token.string, .theme-dark .token.char, .theme-dark .token.builtin, .theme-dark .token.inserted, .theme-dark .cm-string, .theme-dark .cm-string-2 {
+    color: var(--primary-accent-4);
+}
+
+.theme-dark .token.atrule, .theme-dark .token.attr-value, .theme-dark .token.function, .theme-dark .token.class-name, .theme-dark .cm-attribute, .theme-dark .cm-type, .theme-dark .cm-def {
+    color: var(--secondary-accent-text);
+}

@@ -1,0 +1,4 @@
+body:not(.classic-statusbar):not(.permanently-hide-statusbar) .kanban-plugin__board {
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}

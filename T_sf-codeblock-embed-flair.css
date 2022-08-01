@@ -1,0 +1,19 @@
+pre[class*=language-sh]::after {
+    content: "Shell";
+    font-size: calc(var(--monospace-font-size) * .9);
+    text-shadow: none;
+    color: var(--text-muted);
+    position: absolute;
+    top: 3px;
+    right: 6px;
+}
+
+pre[class*=language-python]::after {
+    content: "Python";
+    font-size: calc(var(--monospace-font-size) * .9);
+    text-shadow: none;
+    color: var(--text-muted);
+    position: absolute;
+    top: 3px;
+    right: 6px;
+}

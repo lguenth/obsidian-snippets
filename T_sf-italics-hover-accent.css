@@ -1,0 +1,6 @@
+.theme-dark, .theme-light {
+    --bold-light: var(--hover-accent-2);
+    --bold-dark: var(--hover-accent-3);
+    --italics-light: var(--hover-accent-2);
+    --italics-dark: var(--hover-accent-3);
+}

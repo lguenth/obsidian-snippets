@@ -1,0 +1,3 @@
+.gamma-colors.gamma-colors, :is(.theme-light,.theme-dark) {
+    --unresolved-link-color: var(--purple-shifted) !important;
+}

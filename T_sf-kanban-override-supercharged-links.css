@@ -1,0 +1,3 @@
+div[data-id="fbde-8b06"] div.setting-item-description::before, .data-link-icon[data-link-kanban-plugin="basic"  i]::before {
+    content: var(--fbde-8b06-before) !important;
+}
