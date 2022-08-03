@@ -1,0 +1,11 @@
+.markdown-source-view .mermaid svg { 
+  height: auto;
+}
+
+.markdown-source-view .mermaid svg {
+  width: 100%;
+}
+
+.markdown-source-view .mermaid {
+  overflow: scroll;
+}
