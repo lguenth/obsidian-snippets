@@ -7,5 +7,4 @@ Parts of my CSS snippet collection for [Obsidian](https://obsidian.md/).
 P – Plugin  
 T – Theme  
 O – Obsidian (core)  
-  
-F - Features (not currently included)  
+F - Features  
