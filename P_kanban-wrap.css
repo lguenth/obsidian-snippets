@@ -1,0 +1,32 @@
+.kanban-plugin__board.kanban-plugin__board > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 256px); /* Width */
+    grid-template-rows:  repeat(auto-fit, minmax(300px, max-content)); /* Height */
+    width: 100%;
+    gap: 10px 50px; /* Space between Lanes */
+    overflow-y: auto;
+}
+
+/* This might cause issues but you have to remove it so things wrap correctly at the right place */
+.kanban-plugin__board.kanban-plugin__board > div > .kanban-plugin__placeholder {
+    display: none;
+}
+
+.kanban-plugin__lane-wrapper {
+    height: 100%;
+}
+
+.kanban-plugin__placeholder {
+    height: 100%;
+}
+
+body .kanban-plugin__scroll-container.kanban-plugin__scroll-container {
+    height: -webkit-fill-available;
+}
+
+
+/* SF specific */
+body:not(.classic-statusbar):not(.permanently-hide-statusbar) .kanban-plugin__board {
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,9 @@
+.cm-formatting-list-ul, .is-live-preview .list-bullet {
+    font-family: "Source Code Pro",monospace;
+    font-weight: 500;
+}
+
+.markdown-source-view.mod-cm6 .list-bullet:after {
+    right: 0;
+    content: '\2022';
+}
