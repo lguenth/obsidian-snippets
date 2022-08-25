@@ -14,7 +14,7 @@
 /* Line color */
 .graph-view.color-line {
   color: var(--text-muted); 
-  opacity: 0.1}
+  opacity: 0.2}
 
 /* Line color on hover */
 .graph-view.color-line-highlight {
