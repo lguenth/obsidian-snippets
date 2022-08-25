@@ -1,10 +1,14 @@
 # CSS Snippetry
 
-Parts of my CSS snippet collection for [Obsidian](https://obsidian.md/).
+Parts of my CSS snippet collection for [Obsidian](https://obsidian.md/). The (excluded) rest of them were yoinked, not sure about their licenses.
 
-## Legend
+## Legend (me)
 
-P – Plugin  
-T – Theme  
-O – Obsidian (core)  
-F - Features  
+| Symbol | Meaning         |
+|:-------|:----------------|
+| T      | Theme           |
+| O      | Obsidian (core) |
+| P      | Plugin          |
+| F      | Features        |  
+
+I call this my Topf framework. Yep. 🪴
