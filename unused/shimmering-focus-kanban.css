@@ -1,0 +1,222 @@
+/* Fix kanban frame and lane spacing */
+body .kanban-plugin__board > div {
+  padding: 8px 0 0;
+}
+body .kanban-plugin__lane-wrapper,
+body .kanban-plugin__lane-placeholder {
+  margin-left: 8px !important;
+  margin-right: 0 !important;
+}
+
+/* Fix kanban card spacing */
+body .kanban-plugin__scroll-container.kanban-plugin__vertical .kanban-plugin__item-wrapper {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+body .kanban-plugin__scroll-container.kanban-plugin__vertical .kanban-plugin__placeholder:not(:only-child) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body .kanban-plugin__item-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body .kanban-plugin__item {
+  margin-top: 0 !important;
+}
+body .kanban-plugin__item-title-wrapper {
+  padding: 5px 5px;
+  position: relative;
+}
+body .kanban-plugin__item-metadata:not(:empty) {
+  padding-top: 0 !important;
+}
+body .kanban-plugin__item-metadata:is(:empty) {
+  display: none; /* hide the gap when meta is empty */
+}
+body .kanban-plugin__item-title .markdown-preview-view p,
+body .kanban-plugin__item-title .markdown-preview-view pre {
+  margin-left: 0;
+}
+body .kanban-plugin__item-form,
+body .kanban-plugin__item-button-wrapper {
+  border-top: 0;
+  margin: 0 6px 6px;
+  padding: 0;
+}
+body .kanban-plugin__item-form {
+  margin-top: 1px;
+}
+
+/* Fix Archive button on completed cards */
+.kanban-plugin__item-prefix-button-wrapper {
+  background-color: var(--background-primary);
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.kanban-plugin__item-title-wrapper[data-ignore-drag] .kanban-plugin__item-prefix-button-wrapper {
+  display: none; /* Don't show the button when editing the card */
+}
+.kanban-plugin__item:hover .kanban-plugin__item-prefix-button-wrapper {
+  background-color: var(--active-hover-kanban-item);
+}
+.kanban-plugin__item-prefix-button {
+  margin: 0 !important;
+}
+.kanban-plugin__item-prefix-button .kanban-plugin__icon {
+  padding: 3px;
+}
+
+/* Fix code blocks in kanban cards */
+.kanban-plugin__item.kanban-plugin__item pre {
+  border-color: var(--bg3);
+  display: block;
+  margin-bottom: 0 !important;
+  position: relative; /* fix language label position */
+}
+.kanban-plugin__item.kanban-plugin__item pre button.copy-code-button {
+  align-items: center;
+  display: flex;
+  height: 22px;
+  width: 24px;
+  justify-content: center;
+  margin-top: 0;
+  padding: 0 6px 0 8px;
+}
+.kanban-plugin__item.kanban-plugin__item pre[class*=language-]::after {
+  bottom: 0; /* Move to the button bar */
+  padding: 3px 6px;
+  right: 0;
+  top: auto;
+}
+
+/* Fix lists in kanban cards */
+.kanban-plugin__markdown-preview-view ul.contains-task-list {
+  padding-left: 0;
+}
+.kanban-plugin__markdown-preview-view ul.contains-task-list ul.contains-task-list {
+  padding-left: 19px;
+}
+.kanban-plugin__markdown-preview-view div > :is(ol,ul):not(.contains-task-list) {
+  padding-left: 24px !important;
+  margin-top: 0;
+}
+.kanban-plugin__markdown-preview-view :is(ul,ol) :is(ul,ol) li {
+  font-size: 1em !important; /* Fixes child font sizes */
+}
+
+/* Fix outline color of card when dragging */
+body .kanban-plugin__drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item {
+  border: 1px solid var(--hover-accent-2);
+  box-shadow: 0 15px 25px #0003;
+}
+
+/* Fix placeholder size when dragging an empty lane */
+body .kanban-plugin__drag-container .kanban-plugin__placeholder {
+  width: 100%;
+}
+
+/* Fix metadata tag margins and add card button when dragging */
+body .kanban-plugin__item :is(.kanban-plugin__item-tag,.kanban-plugin__item-tags,.kanban-plugin__item-metadata) {
+    padding-top: 0;
+    padding-left: 0;
+    margin-top: 0;
+}
+body .kanban-plugin__drag-container button.kanban-plugin__new-item-button, .kanban-plugin textarea.kanban-plugin__item-input {
+    font-size: .8em;
+    padding: 3px 8px 5px;
+}
+body .kanban-plugin__drag-container .kanban-plugin__lane-title-text div>p {
+    font-family: var(--button-font);
+    font-size: 1.1em;
+    letter-spacing: .1px;
+    margin-top: -1px;
+}
+
+/* Dim and strike-through completed cards */
+.is-complete .kanban-plugin__item-content-wrapper p {
+  color: var(--text-faint);
+  text-decoration: line-through;
+}
+.is-complete .kanban-plugin__item-content-wrapper pre {
+  opacity: .5;
+}
+
+:root {
+  --tag-opacity-bg: 0.18;
+  --tag-opacity-border: 0.3;
+
+  --tag-opacity-bg__hover-green: 0.38;
+  --tag-opacity-bg__hover-red: 0.38;
+  --tag-opacity-bg__hover-yellow: 0.28;
+  --tag-opacity-bg__hover-purple: 0.5;
+
+  --tag-rgb__green: 24, 224, 34;
+  --tag-rgb__red: 254, 171, 171;
+  --tag-rgb__yellow: 249, 242, 26;
+  --tag-rgb__purple: 218, 207, 250;
+
+  --tag-rgb-bg__green: 14, 138, 22;
+  --tag-rgb-bg__red: 252, 41, 41;
+  --tag-rgb-bg__yellow: 250, 246, 27;
+  --tag-rgb-bg__purple: 83, 25, 231;
+}
+
+body.theme-dark .kanban-plugin__item-tags:not(:empty) {
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
+body.theme-dark .kanban-plugin__item-tag[href="#new"],
+body.theme-dark .kanban-plugin__item-tag[href="#bug"],
+body.theme-dark .kanban-plugin__item-tag[href="#compat"],
+body.theme-dark .kanban-plugin__item-tag[href="#test"] {
+  border-radius: 2px !important;
+  padding: 0 4px !important;
+  margin-right: 6px;
+}
+.kanban-plugin__item-tag > span {
+  display: none !important;
+}
+.kanban-plugin__item-tag[href="#new"] {
+  background-color: rgba(var(--tag-rgb-bg__green), var(--tag-opacity-bg)) !important;
+  border: 1px solid rgba(var(--tag-rgb__green), var(--tag-opacity-bg));
+  color: rgb(var(--tag-rgb__green)) !important;
+  font-weight: 400;
+}
+.kanban-plugin__item-tag[href="#new"]:hover {
+  background-color: rgba(var(--tag-rgb-bg__green), var(--tag-opacity-bg__hover-green)) !important;
+  text-decoration: none !important;
+}
+.kanban-plugin__item-tag[href="#bug"] {
+  background-color: rgba(var(--tag-rgb-bg__red), var(--tag-opacity-bg)) !important;
+  border: 1px solid rgba(var(--tag-rgb__red), var(--tag-opacity-bg));
+  color: rgb(var(--tag-rgb__red)) !important;
+  font-weight: 400;
+}
+.kanban-plugin__item-tag[href="#bug"]:hover {
+  background-color: rgba(var(--tag-rgb-bg__red), var(--tag-opacity-bg__hover-red)) !important;
+  text-decoration: none !important;
+}
+.kanban-plugin__item-tag[href="#test"] {
+  background-color: rgba(var(--tag-rgb-bg__yellow), var(--tag-opacity-bg)) !important;
+  border: 1px solid rgba(var(--tag-rgb__yellow), var(--tag-opacity-bg));
+  color: rgb(var(--tag-rgb__yellow)) !important;
+  font-weight: 400;
+}
+.kanban-plugin__item-tag[href="#test"]:hover {
+  background-color: rgba(var(--tag-rgb-bg__yellow), var(--tag-opacity-bg__hover-yellow)) !important;
+  text-decoration: none !important;
+}
+.kanban-plugin__item-tag[href="#compat"] {
+  background-color: rgba(var(--tag-rgb-bg__purple), var(--tag-opacity-bg)) !important;
+  border: 1px solid rgba(var(--tag-rgb__purple), var(--tag-opacity-bg));
+  color: rgb(var(--tag-rgb__purple)) !important;
+  font-weight: 400;
+}
+.kanban-plugin__item-tag[href="#compat"]:hover {
+  background-color: rgba(var(--tag-rgb-bg__purple), var(--tag-opacity-bg__hover-purple)) !important;
+  text-decoration: none !important;
+}

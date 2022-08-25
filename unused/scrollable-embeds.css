@@ -1,0 +1,35 @@
+.markdown-source-view .markdown-embed {
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 10px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+}
+
+.internal-embed.is-loaded .markdown-embed .markdown-embed-content {
+    max-height: 350px !important;
+    overflow: auto;
+    padding-top: .2rem;
+    padding-bottom: 1rem;
+}
+
+.markdown-embed-title {
+    height: auto;
+    color: var(--text-muted);
+    font-size: calc(var(--font-adaptive-normal) + 3px);
+    line-height: 1.53em;
+    text-align: left;
+    padding: 8px 40px 4px 12px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+.markdown-embed-link {
+    top: 0px !important;
+    right: 0 !important;
+    margin: 8px 12px 8px 0px !important;
+
+}
+.internal-embed:not([src*="#^"]) .markdown-embed-link {
+    width: unset;
+}
+.markdown-embed-link svg.link {
+    opacity: 1;
+}

@@ -1,0 +1,3 @@
+.workspace-tabs .workspace-leaf-content[data-mode="preview"] > .view-content {
+  margin-left: -10px;
+}

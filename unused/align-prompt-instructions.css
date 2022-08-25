@@ -1,0 +1,19 @@
+span.prompt-instruction-command {
+    display: inherit;
+}
+
+.prompt-instructions {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    justify-content: space-evenly;
+    padding: inherit;
+    margin-bottom: 5px;
+    /* margin-top: 5px; */
+}
+
+.prompt-instruction {
+    display: inline-block;
+    /* margin-right: 20px; */
+    height: -webkit-fill-available;
+    padding: inherit;
+}

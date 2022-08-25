@@ -1,0 +1,16 @@
+body .kanban-plugin__grow-wrap::after, body .kanban-plugin__grow-wrap>textarea, body .kanban-plugin__item-title p, body .kanban-plugin__markdown-preview-view {
+    font-size: var(--font-adaptive-normal);
+    line-height: 1.5;
+}
+
+body .kanban-plugin__lane-header-wrapper .kanban-plugin__grow-wrap>textarea, body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap>textarea, body .kanban-plugin__lane-title p {
+    background: 0 0;
+    color: var(--text-normal);
+    font-size: var(--font-adaptive-normal);
+    font-weight: 500;
+}
+
+body .kanban-plugin__lane-header-wrapper {
+    border-bottom: 0;
+    background-color: var(--h3l);
+}

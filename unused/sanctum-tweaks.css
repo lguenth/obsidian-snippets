@@ -1,0 +1,107 @@
+.workspace-ribbon.side-dock-ribbon.mod-left .workspace-ribbon-collapse-btn {
+    order: 0;
+    margin-top: 0px;
+    padding: 10px 0px 24px 11.5px;
+    cursor: pointer;
+    color: var(--text-faint);
+}
+
+.nav-file .nav-file-title.is-active {
+    background-color: var(--color-primary-2);
+    color: var(--text-normal);
+    border: none;
+    font-weight: 400;
+    border-radius: 4px;
+}
+
+.nav-file-title.is-active .nav-file-title-content {
+    color: var(--text-normal);
+    line-height: 23px;
+}
+
+.status-bar-item.plugin-obsidian-git.obsidian-git-statusbar-idle {
+    padding: 3.3px 8px 0px 8px;
+}
+
+.nav-folder .collapse-icon {
+    display: none;
+    order: 1;
+    margin-left: 0px;
+}
+
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder {
+    color: var(--text-normal);
+    padding: 0;
+    margin-left: 4px;
+    font-weight: 200;
+}
+
+.nav-file .nav-file-title.is-active .nav-file-title-content::before {
+    color: var(--text-normal);
+}
+
+body.theme-dark, body.theme-light {
+    --indentation-guide-color: var(--color-primary-4) !important;
+}
+
+.status-bar div.separator svg, .status-bar div.separator.is-collapsed.sortable-chosen svg {
+    -webkit-mask-image: var(--right-indicator);
+    margin-top: 3.95px;
+}
+
+.cm-s-obsidian span.cm-hashtag {
+    display: inline-block;
+    background-color: rgba(var(--color-accent-l)/0.15);
+    color: var(--color-accent);
+    font-size: var(--font-scale-00);
+    font-weight: var(--font-regular);
+    line-height: var(--leading-0);
+    padding: 2px 4px 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 0px;
+    border: 1px solid transparent;
+    border-radius: 0.4em;
+    transition: var(--duration-moderate-1) var(--motion-exit-productive);
+    filter: saturate(1);
+}
+
+span.cm-hashtag.cm-hashtag-end::before {
+    display: inline-block;
+}
+
+.BC-Matrix.svelte-s0mwjt>div.svelte-s0mwjt {
+    border: 0px solid var(--background-modifier-border) !important;
+    padding-top: 10px !important;
+}
+
+.BC-Matrix-square.svelte-s0mwjt.svelte-s0mwjt {
+    border: 0px solid var(--background-modifier-border) !important;
+}
+
+.titlebar {
+    background-color: rgb(64 150 147 / 0%) !important;
+}
+
+.BC-Matrix-header.svelte-s0mwjt.svelte-s0mwjt {
+    margin: 10px 1px 1px 14px !important;
+    padding: 1px 1px !important;
+    font-size: 14px !important;
+}
+
+.admonition.admonition-plugin {
+    background-color: rgba(var(--rgb-primary-0), 0.2) !important;
+}
+
+.markdown-preview-view h6, .cm-s-obsidian .cm-header-6, .cm-s-obsidian .HyperMD-header-6 {
+    font-size: var(--heading-6);
+    line-height: var(--leading-1);
+    font-weight: var(--heading-6-weight);
+    letter-spacing: var(--tracking-1);
+    color: var(--text-normal);
+    text-transform: none !important;
+}
+
+.HyperMD-header-6.cm-line {
+  position: relative;
+}

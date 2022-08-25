@@ -1,0 +1,9 @@
+.gantt .mermaid {
+  overflow: scroll;
+}
+
+.gantt .mermaid svg {
+  max-width: unset;
+  width: 150%;
+  height: 150%;
+}
