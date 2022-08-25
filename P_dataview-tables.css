@@ -1,0 +1,80 @@
+/*────────────────────────────────────
+                Dataview
+────────────────────────────────────*/
+/* Dataview Tables */
+table.dataview {
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* padding fix for LP */
+.block-language-dataview.node-insert-event > div.markdown-rendered.cm-embed-block {
+  padding: 0;
+}
+
+.markdown-source-view.mod-cm6 .dataview {
+  /* Source View */
+}
+.markdown-source-view.mod-cm6 .dataview.table-view-table {
+  margin-bottom: 0;
+  border: 1px solid var(--background-modifier-border);
+}
+.markdown-source-view.mod-cm6 .dataview.table-view-table > thead > tr > th {
+  font-size: 1em;
+  border-width: 0px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  border-right: 1px solid var(--background-modifier-border);
+}
+.markdown-source-view.mod-cm6 .dataview.table-view-table thead, .markdown-source-view.mod-cm6 .dataview.table-view-table tr, .markdown-source-view.mod-cm6 .dataview.table-view-table td, .markdown-source-view.mod-cm6 .dataview.table-view-table th {
+  padding: 4px 10px;
+}
+.markdown-source-view.mod-cm6 .dataview.table-view-table thead {
+  border: none;
+  margin: 0;
+}
+.markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
+  font-size: 1em;
+  color: var(--md-color-code-red-1);
+  background: var(--background-secondary);
+}
+.markdown-source-view.mod-cm6 .dataview.table-view-table .table-view-tbody tr {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+.markdown-source-view.mod-cm6 .dataview.table-view-table .table-view-tbody td {
+  padding: 4px 10px;
+  border-right: 1px solid var(--background-modifier-border);
+}
+.theme-light .markdown-source-view.mod-cm6 .dataview.table-view-table .table-view-tbody tr {
+  background: var(--color-l-whiter);
+}
+.theme-dark .markdown-source-view.mod-cm6 .dataview.table-view-table .table-view-tbody tr {
+  background: var(--color-d-blacker);
+}
+.markdown-source-view.mod-cm6 .dataview.table-view-table .table-view-tbody td:not(td:last-of-type) {
+  padding: 4px 10px;
+}
+.markdown-source-view.mod-cm6 .dataview.table-view-table ul.dataview-ul {
+  list-style: none;
+}
+.markdown-preview-view .dataview {
+  /* Preview View */
+}
+.markdown-preview-view .dataview.table-view-table {
+  border: 1px solid var(--background-modifier-border);
+}
+.markdown-preview-view .dataview.table-view-table > thead > tr > th {
+  font-size: 1em;
+  border-width: 0px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  border-right: 1px solid var(--background-modifier-border);
+}
+.markdown-preview-view .dataview.table-view-table .table-view-tbody tr {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+.markdown-preview-view .dataview.table-view-table .table-view-tbody td {
+  padding: 4px 10px;
+  border-right: 1px solid var(--background-modifier-border);
+}
+.markdown-preview-view .dataview.table-view-table ul.dataview-ul {
+  list-style: none;
+}
