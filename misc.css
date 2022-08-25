@@ -1,0 +1,76 @@
+/* --- CORE --- */
+
+/* Make hr lines thinner */
+.markdown-source-view.mod-cm6 hr {
+    border-width: 1px;
+}
+
+/* Flash file in nav */
+.nav-file.is-flashing {
+    box-shadow: 0 0 var(--text-highlight-bg);
+}
+
+/* Callouts */
+
+/*
+.callout {
+    border-radius: 10px;
+}
+
+.callout[data-callout="crumbs"] .callout-title {
+    padding: 5px;
+}
+
+.callout[data-callout="crumbs"] .callout-content {
+    padding: 0px 15px;
+    margin-top: 0px;
+    margin-bottom: -15px;
+}
+
+.callout[data-callout="calendar"] {
+    --callout-color: 0, 0, 0;
+    --callout-icon: calendar;
+    border: 0;    
+}
+
+.callout[data-callout="calendar"] .callout-title {
+    display: none !important;
+}
+
+.callout[data-callout="calendar"] .callout-content {
+    padding: 0px 15px;
+    margin-top: 0px;
+}
+
+.callout[data-callout="habits"] {
+    --callout-color: 611, 22, 20;
+    --callout-icon: clipboard-check;
+}
+
+*/
+
+/* --- PLUGINS --- */
+
+/* Sliding Panes: Show header on the right (up top, facing text)
+.file-embed-title, .markdown-embed-title, .view-header-title {
+    text-align: right;
+}
+*/
+
+/* Link Favicons: Increase padding before text starts */
+.link-favicon {
+  padding-right: 3px;
+}
+
+/* Breadcrumbs: Make the bold links in trail muted */
+.internal-link.BC-Link strong {
+    color: var(--text-muted);
+}
+
+.BC-trail {
+    border: none;
+}
+
+.excalidraw canvas {
+	cursor: default !important;
+}
