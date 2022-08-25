@@ -1,0 +1,16 @@
+.markdown-preview-view.kanban-plugin__markdown-preview-view {
+    font-size: 20px;
+}
+
+.kanban-plugin__item .tasks-count {
+    display: none;
+}
+
+body .kanban-plugin__item-title-wrapper {
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.kanban-plugin__item-title .markdown-preview-view.kanban-plugin__markdown-preview-view.kanban-plugin__item-markdown .kanban-plugin__embed-link-wrapper {
+    height: 0px;
+}

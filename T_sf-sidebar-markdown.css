@@ -1,0 +1,35 @@
+.workspace-split.mod-left-split .workspace-leaf-content[data-type="markdown"], .workspace-split.mod-right-split .workspace-leaf-content[data-type="markdown"] {
+    --sidebar-font-size: 1rem;
+}
+
+.workspace-split.mod-left-split .workspace-leaf-content[data-type="markdown"] :is(h1,h2,h3,h4,h5,h6/*,span.cm-header.cm-header-1,span.cm-header.cm-header-2,span.cm-header.cm-header-3,span.cm-header.cm-header-4,span.cm-header.cm-header-5,span.cm-header.cm-header-6*/) {
+    display: none;
+}
+
+.workspace-split.mod-left-split .workspace-leaf-content[data-type="markdown"] :is(.frontmatter-container, .frontmatter/*, .cm-hmd-frontmatter*/) {
+    display: none;
+}
+
+.workspace-split.mod-left-split .workspace-leaf-content[data-type="markdown"] :is(/*.markdown-source-view, */body>.app-container .view-content>div>.markdown-preview-view) {
+   padding-left: 20px;
+   padding-right: 20px;
+   margin-top: -20px;
+}
+
+.workspace-split.mod-right-split .workspace-leaf-content[data-type="markdown"] :is(.frontmatter-container, .frontmatter/*, .cm-hmd-frontmatter*/) {
+    display: none;
+}
+
+.workspace-split.mod-right-split .workspace-leaf-content[data-type="markdown"] :is(/*.markdown-source-view, */body>.app-container .view-content>div>.markdown-preview-view) {
+   padding-left: 20px;
+   padding-right: 20px;
+   margin-top: -20px;
+}
+
+.workspace-split.mod-right-split .workspace-leaf-content[data-type="markdown"] {
+    --sidebar-font-size: 1rem;
+}
+
+.workspace-split.mod-right-split .workspace-leaf-content[data-type="markdown"] :is(h1,h2,h3,h4,h5,h6/*,span.cm-header.cm-header-1,span.cm-header.cm-header-2,span.cm-header.cm-header-3,span.cm-header.cm-header-4,span.cm-header.cm-header-5,span.cm-header.cm-header-6*/) {
+    display: none;
+}
