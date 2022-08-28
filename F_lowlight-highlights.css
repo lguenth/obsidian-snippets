@@ -1,0 +1,26 @@
+mark,
+span.cm-highlight,
+.markdown-preview-view mark {
+  --lowlight-background: var(--background-primary);
+  border-radius: 0;
+  background-image: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0) 40%,
+    var(--lowlight-background) 40%
+  ) !important;
+}
+
+.workspace-split.mod-left-split mark,
+.workspace-split.mod-left-split span.cm-highlight,
+.workspace-split.mod-left-split .markdown-preview-view mark,
+.workspace-split.mod-right-split mark,
+.workspace-split.mod-right-split span.cm-highlight,
+.workspace-split.mod-right-split .markdown-preview-view mark {
+  --lowlight-background: var(--background-secondary);
+}
+
+.admonition-content mark,
+.admonition-content span.cm-highlight,
+.admonition-content > .markdown-preview-view mark {
+  --lowlight-background: var(--background-primary-alt);
+}
