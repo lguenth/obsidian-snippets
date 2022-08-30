@@ -1,0 +1,91 @@
+body {
+  --heading-formatting: var(--text-faint);
+  --list-spacing: 0.2em;
+  --file-line-width: 800px;
+  
+  --h1-font: "Crimson Pro";
+  --h2-font: "Crimson Pro";
+  --h3-font: "Crimson Pro";
+  --h4-font: "Crimson Pro";
+  --h5-font: "Crimson Pro";
+  --h6-font: "Crimson Pro";
+  
+  
+  --kanban-color-1: #0065d852;
+  --kanban-color-2: #30e4e441;
+  --kanban-color-3: #1cb54f44;
+  --kanban-color-4: #97b82b49;
+  --kanban-color-5: #bb722d41;
+  --kanban-color-6: #d12e2e42;
+  --kanban-color-7: #8f36cb3f;
+}
+
+.HyperMD-quote {
+  background: var(--background-secondary);
+}
+
+.markdown-preview-view > div > div > div > ul.dataview.list-view-ul,
+.markdown-preview-view > div > div > ul,
+.markdown-preview-view ul.contains-task-list {
+  padding-left: 1.35rem;
+}
+
+.markdown-preview-view ol {
+  padding-left: 2rem;
+}
+
+.markdown-preview-view div > :is(ol, ul) {
+  margin-top: 5px;
+}
+
+.cm-formatting-list-ul,
+.is-live-preview .list-bullet {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 700;
+}
+
+/* indention lines */
+.markdown-rendered.show-indentation-guide li > ul::before,
+.markdown-source-view.mod-cm6 .cm-indent::before {
+  border-right: var(--muted-border);
+}
+
+/* turn off loose lists */
+body:not(.re-enable-loose-lists) .markdown-preview-view :is(ol, ul) > li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.HyperMD-header.HyperMD-header-1.cm-line,
+.HyperMD-header.HyperMD-header-2.cm-line,
+.HyperMD-header.HyperMD-header-3.cm-line,
+.HyperMD-header.HyperMD-header-4.cm-line,
+.HyperMD-header.HyperMD-header-5.cm-line,
+.HyperMD-header.HyperMD-header-6.cm-line {
+  padding-block-end: 10px;
+}
+
+/* Shimmering Focus: Colorful YAML */
+.cm-hmd-frontmatter {
+  color: var(--text-normal);
+}
+
+.cm-def.cm-hmd-frontmatter {
+  color: rgb(153, 110, 0);
+}
+
+.cm-hmd-frontmatter:is(.cm-keyword,.cm-string), .frontmatter.language-yaml :is(.boolean,.number,.string) {
+  color: rgb(153, 110, 0);
+}
+
+.cm-atom.cm-hmd-frontmatter, .frontmatter.language-yaml .atrule {
+  color: rgb(16, 125, 147);
+}
+
+.cm-line .cm-hmd-frontmatter.cm-meta:is(:first-child,:nth-child(2),:last-child), .frontmatter.language-yaml .punctuation {
+  color: rgb(217, 38, 128);
+}
+
+.workspace-tab-header-container {
+  background-color: hsla(179, 46%, 35%, 0.3);
+}
