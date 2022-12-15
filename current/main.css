@@ -1,0 +1,379 @@
+/* Base */
+
+body {
+    --h1-font: "Recursive";
+    --h2-font: "Recursive";
+    --h3-font: "Recursive";
+    --h4-font: "Recursive";
+    --h5-font: "Recursive";
+    --h6-font: "Recursive";
+
+    --inline-title-size: 1.4em;
+    --h1-size: 1.3em;
+    --h2-size: 1.25em;
+    --h3-size: 1.23em;
+    --h4-size: 1.20em;
+    --h5-size: 1.17em;
+    --h6-size: 1.15em;
+
+    --graph-node-unresolved: #71F79F;
+    --button-border: var(--modal-border-color);
+    /* --text-highlight-bg: rgb(0 189 255 / 22%) !important; */
+    /* --file-line-width: 800px; */
+}
+
+/* Don't let themes hide the frontmatter container and inline title */
+
+body .frontmatter-container {
+    display: block;
+}
+
+body .inline-title {
+    display: block;
+}
+
+/* Turn italics into underlines... yeah, you read that right */
+
+em,
+.cm-em {
+    font-style: unset;
+    text-decoration: underline;
+}
+
+.nav-file-title-content,
+.nav-folder-title-content {
+    /* display: inline-flex; */
+    text-overflow: clip;
+}
+
+/* Equal padding on inline titles */
+
+.workspace-leaf-content[data-mode="source"] .inline-title {
+    padding-top: 20px;
+}
+
+.workspace-leaf-content[data-mode="preview"] .inline-title {
+    padding-top: 20px;
+    padding-bottom: 4px;
+}
+
+.is-live-preview .HyperPM-header {
+    padding-bottom: 10px;
+}
+
+/* Hide icons in Starred pane */
+
+.workspace-leaf-content[data-type="starred"] .nav-file-icon {
+    display: none;
+}
+
+/* Hide cluttered keybindings from prompts */
+
+.prompt-instructions {
+    display: none;
+}
+
+/* Wrap aliases in frontmatter */
+
+.frontmatter-container .frontmatter-alias {
+    white-space: unset;
+}
+
+/* Make comments in frontmatter better visible */
+
+.cm-s-obsidian .cm-comment.cm-hmd-frontmatter {
+    color: var(--text-accent);
+}
+
+/* From SlRvb: Give line numbers more padding in gutter */
+
+/*body { --file-folding-offset: 20px; }*/
+
+.markdown-source-view.mod-cm6 .cm-gutters {
+    margin-left: -25px;
+    margin-right: 10px;
+}
+
+/* Less padding beneath frontmatter container */
+
+.frontmatter-container {
+    padding: var(--size-4-2) 0 var(--size-2-2);
+}
+
+/* Highlight active line */
+
+.cm-active {
+    background-color: var(--background-secondary);
+}
+
+/* Hide metadata box header */
+
+.frontmatter-container-header {
+    display: none !important;
+}
+
+span.frontmatter-section-label+div {
+    padding-left: 20px;
+}
+
+/* Less spacing between metadata entries */
+
+.frontmatter-container .frontmatter-section {
+    margin-bottom: 4px;
+}
+
+.frontmatter-container .frontmatter-section-data {
+    font-size: var(--font-smaller);
+}
+
+/* Don't show the frontmatter in LP (This can look funky) */
+/*
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder {
+    display: none;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .cm-line:not(.cm-active):not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator .collapse-indicator {
+    padding-right: 10px;
+    padding-top: 2.5px;
+    right: -5px;
+}
+
+
+.markdown-source-view.mod-cm6.is-live-preview .cm-line:not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator.is-collapsed:not(:hover, :active), .markdown-source-view.mod-cm6.is-live-preview .cm-line:not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator.is-collapsed:not(:hover, :active) ~ .cm-hmd-frontmatter {
+    opacity: 0;
+    transition: .8s;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .cm-line:not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator.is-collapsed:hover, .markdown-source-view.mod-cm6.is-live-preview .cm-line:not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator.is-collapsed:hover ~ .cm-hmd-frontmatter {
+    opacity: 1;
+    transition: .5s;
+}
+*/
+
+/* Hide the ... fold indicator */
+
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder[title$="unfold"] {
+    display: none;
+}
+
+
+/* Make comments less noticable (but not in codeblocks) */
+/*
+.cm-s-obsidian span.cm-comment {
+    color: var(--color-base-30);
+}
+
+.cm-s-obsidian span.cm-comment.cm-hmd-codeblock {
+    color: var(--text-faint);
+}
+*/
+
+/* Checkboxes should have the same padding inside callouts */
+
+.callout input.task-list-item-checkbox {
+    margin-right: 12px;
+}
+
+/* Don't underline external links in source mode */
+
+.markdown-source-view.mod-cm6:not(.is-live-preview) span.cm-url {
+    text-decoration: none;
+}
+
+.nav-folder.mod-root .nav-folder .nav-folder {
+    --rainbow-folder-color: inherit;
+}
+
+/* Callout styling */
+
+.callout .callout-icon {
+    padding-right: 8px;
+}
+
+.callout-title {
+    background-color: unset;
+}
+
+.callout.is-collapsed {
+    --callout-padding: 12px 12px 12px 16px;
+}
+
+.callout:not(.is-collapsed) {
+    --callout-padding: 12px 12px 4px 16px;
+}
+
+/* Custom callouts */
+
+.callout[data-callout="meta"] {
+    --callout-color: 255, 41, 126;
+    --callout-icon: lucide-layers !important;
+}
+
+.callout[data-callout="video"] {
+    --callout-color: 133, 92, 214;
+    --callout-icon: lucide-video !important;
+}
+
+/* I forgot what this does */
+
+td {
+    line-height: initial;
+}
+
+/* Padding above iframes if there's a hr */
+
+.markdown-reading-view div[data-tag-name="hr"]~div[data-tag-name="iframe"] {
+    padding-top: 20px !important;
+    padding-bottom: 10px !important;
+}
+
+
+/* Hide scrollbars in Canvas view */
+
+.canvas-node-content.markdown-embed .markdown-preview-view {
+    overflow: hidden;
+}
+
+/* Fixing Minimal again */
+
+.minimal-theme :is(body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataview h4, body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataview>h4, body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs h4, body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs>h1, body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs>h2, body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs>h3, body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs>h4, body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .block-language-dataviewjs>p, body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-container>.contains-task-list, body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.dataview-error, body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.list-view-ul, body:not(.table-100):not(.table-max):not(.table-wide) .markdown-preview-view.is-readable-line-width:not(.table-100):not(.table-max):not(.table-wide) .dataview.result-group) {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* ---- CUSTOM CSSCLASSES ---- */
+
+.mod-cm6.kommunikation .cm-line {
+    font-family: Merriweather;
+}
+
+.hide-scrollbars {
+    overflow: hidden;
+}
+
+/* ---- PLUGINS ---- */
+
+/* Supercharged Links */
+
+div.data-link-icon[data-link-data-href="Ready Room"],
+div.data-link-icon[data-link-data-href="Home"],
+div.data-link-icon[data-link-data-href="Inbox"] {
+    /* color: hsl(var(--accent-h), var(--accent-s), var(--accent-l)); */
+    font-weight: 600;
+}
+
+div.data-link-icon[data-link-data-href="Ready Room"]::before {
+    content: "🌱";
+    padding-right: 5px;
+}
+
+div.data-link-icon[data-link-data-href="Home"]::before {
+    content: "🏠️";
+    padding-right: 5px;
+}
+
+div.nav-file-title-content[data-link-data-href~="Inbox"]::before {
+    content: "📥️";
+    padding-right: 5px;
+}
+
+div.nav-file-title[data-path~="Inbox"] div.nav-file-title-content::before {
+    content: "📥️";
+    padding-right: 5px;
+}
+
+/*
+div.data-link-icon[data-link-data-href$="WiSe 22"], div.data-link-icon[data-link-tags$="seminar"], div.data-link-icon[data-link-tags$="vorlesung"] {
+  color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+}
+*/
+
+/*
+div.data-link-icon[data-link-tags$="übersicht"] {
+  color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+}
+
+div.data-link-icon[data-link-tags$="übersicht"]::before {
+  content: "★";
+  padding-right: 5px;
+}
+*/
+
+/* Longform Plugin */
+
+div#draft-list {
+    overflow: auto;
+}
+
+select.svelte-z7robt.svelte-z7robt,
+select#longform-workflows,
+div.tab-list.svelte-1pulynp button {
+    box-shadow: none;
+}
+
+.longform-compile-step-options.svelte-1rqxud8.svelte-1rqxud8 {
+    padding-top: 0.8rem !important;
+    border: none !important;
+}
+
+/* Smaller Dataview error/no results box */
+
+p.dataview-error-message {
+    display: none;
+}
+
+.dataview-error-box:after {
+    content: "";
+    color: var(--text-faint);
+    padding-left: 20px;
+}
+
+div.dataview-error-box {
+    justify-content: left;
+    min-height: 10px;
+    border: none;
+}
+
+/* Another Quick Switcher */
+
+.another-quick-switcher__status__count-input {
+    display: none;
+}
+
+.another-quick-switcher__status__search-command svg {
+    display: none;
+}
+
+.another-quick-switcher__item__hot-key-guide {
+    display: none;
+}
+
+
+/* Buttons */
+
+.button-center .block-language-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Tasks */
+
+h4.tasks-group-heading {
+    font-size: 1em;
+}
+
+/* Metadata Menu */
+
+.metadata-menu.fileclass-icon {
+    margin-left: 0.3em;
+    cursor: pointer;
+}
+
+/* Hider */
+/*
+.hider-ribbon:not(.is-mobile) .workspace-ribbon.mod-left {
+  display: none !important;
+}
+*/

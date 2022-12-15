@@ -1,7 +1,0 @@
-body:not(.no-search-result-indicator) .obsidian-search-match-highlight::BEFORE {
-    content: "↪ ";
-    color: var(--search-match-color);
-    background-color: var(--bg1);
-    position: absolute;
-    left: 17px;
-}

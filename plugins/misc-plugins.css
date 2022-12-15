@@ -1,0 +1,25 @@
+/* --- PLUGINS --- */
+
+/* Sliding Panes: Show header on the right (up top, facing text) */
+.file-embed-title, .markdown-embed-title, .view-header-title {
+    text-align: right;
+}
+
+/* Link Favicons: Increase padding before text starts */
+.link-favicon {
+    padding-right: 3px;
+}
+
+/* Breadcrumbs: Make the bold links in trail muted */
+.internal-link.BC-Link strong {
+    color: var(--text-muted);
+}
+
+.BC-trail {
+    border: none;
+}
+
+/* Change Excalidraw cursor */
+.excalidraw canvas {
+    cursor: default !important;
+}
